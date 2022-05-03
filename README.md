@@ -33,9 +33,10 @@ O layout da aplicação:
 ### Mobile
 
 <p align="center">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="img-projeto/Tela.png" width="200px">
-
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="img-projeto/Tela2.png" width="200px">
+	<img alt="Tela inicial" title="Tela inicial" src="img-projeto/Screenshot_1.png" width="200px">
+	<img alt="Tela nova transação" title="Tela nova transação" src="img-projeto/Screenshot_2.png" width="200px">
+	<img alt="Tela inicial horizontal" title="Tela inicial horizontal" src="img-projeto/Screenshot_3.png" width="200px">
+	<img alt="Tela nova transação horizontal" title="Tela nova transação horizontal" src="img-projeto/Screenshot_4.png" width="200px">
 </p>
 
 ### 🛠 Tecnologias
