@@ -15,14 +15,17 @@ class ExpensesApp extends StatelessWidget {
     return MaterialApp(
       home: MyHomePage(),
       theme: ThemeData(
-          primarySwatch: Colors.purple,
-          accentColor: Colors.amber,
-          fontFamily: 'OpenSans',
-          appBarTheme: AppBarTheme(
-              titleTextStyle: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold))),
+        primarySwatch: Colors.purple,
+        accentColor: Colors.amber,
+        fontFamily: 'OpenSans',
+        appBarTheme: AppBarTheme(
+          titleTextStyle: TextStyle(
+            fontFamily: 'Roboto',
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
     );
   }
 }
@@ -76,14 +79,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
     bool isLandscape =
-        MediaQuery.of(context).orientation == Orientation.landscape;
+        mediaQuery.orientation == Orientation.landscape;
 
     final appBar = AppBar(
       title: Text(
         'Despesas Pessoais',
         style: TextStyle(
-          fontSize: 20 * MediaQuery.of(context).textScaleFactor,
+          fontSize: 20 * mediaQuery.textScaleFactor,
         ),
       ),
       actions: <Widget>[
@@ -102,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ],
     );
-    final availabelHeight = MediaQuery.of(context).size.height -
+    final availabelHeight = mediaQuery.size.height -
         appBar.preferredSize.height -
         MediaQuery.of(context).padding.top;
 
@@ -114,12 +118,12 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             if (_showChart || !isLandscape)
               Container(
-                height: availabelHeight * (isLandscape ? 0.7 : 0.25),
+                height: availabelHeight * (isLandscape ? 0.8 : 0.25),
                 child: Chart(_recentTransactions),
               ),
             if (!_showChart || !isLandscape)
               Container(
-                height: availabelHeight * 0.75,
+                height: availabelHeight * (isLandscape ? 1 : 0.7),
                 child: TransactionList(_transactions, _removeTransaction),
               ),
           ],

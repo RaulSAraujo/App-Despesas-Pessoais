@@ -22,10 +22,8 @@ class TransactionList extends StatelessWidget {
                   child: Text(
                     'Nenhuma Transação Cadastrada!',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20 * MediaQuery.of(context).textScaleFactor
-                    ),
-                    
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20 * MediaQuery.of(context).textScaleFactor),
                   ),
                 ),
                 SizedBox(height: constraints.maxHeight * 0.05),
@@ -54,22 +52,45 @@ class TransactionList extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(6),
                       child: FittedBox(
-                        child: Text('R\$${tr.value}'),
+                        child: Text(
+                          'R\$${tr.value}',
+                          style: TextStyle(
+                              fontFamily: 'Roboto',
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                   ),
                   title: Text(
                     tr.title,
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
+                    ),
                   ),
                   subtitle: Text(
                     DateFormat('d MMM y').format(tr.date),
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'OpenSans',
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
-                  trailing: IconButton(
-                    icon: Icon(Icons.delete),
-                    color: Theme.of(context).errorColor,
-                    onPressed: () => onRemove(tr.id),
-                  ),
+                  trailing: MediaQuery.of(context).size.width > 450
+                      ? FlatButton.icon(
+                          onPressed: () => onRemove(tr.id),
+                          icon: Icon(Icons.delete),
+                          label: Text('Excluir'),
+                          textColor: Theme.of(context).errorColor,
+                        )
+                      : IconButton(
+                          icon: Icon(Icons.delete),
+                          color: Theme.of(context).errorColor,
+                          onPressed: () => onRemove(tr.id),
+                        ),
                 ),
               );
             },
