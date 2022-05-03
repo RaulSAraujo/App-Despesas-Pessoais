@@ -3,25 +3,6 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/RaulSAraujo/App-Despesas-Pessoais?style=social)
 ![GitHub downloads](https://img.shields.io/github/downloads/RaulSAraujo/App-Despesas-Pessoais/total?style=social)
 
-### Status do Projeto
-
-<h4 align="center"> 
-	🚧  Flutter Select 🚀 Em construção...  🚧
-</h4>
-
-### Features
-
-- [x] Planejamento
-- [x] Criando tema
-- [x] Criando chart (tela inicial)
-- [x] Criando chart_bar (tela inicial)
-- [x] Criando lista de transação (tela inicial)
-- [x] Criando Formulario de transação (tela inicial)
-- [x] Implementando responsividade
-- [x] Modo paisagem
-- [x] Correções
-
-
 ## 💻 Sobre o projeto
 
 Aplicativo de despesas pessoais onde será calculado todos os gastos semanais do usuario.
