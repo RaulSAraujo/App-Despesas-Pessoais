@@ -15,17 +15,14 @@ class ExpensesApp extends StatelessWidget {
     return MaterialApp(
       home: MyHomePage(),
       theme: ThemeData(
-        primarySwatch: Colors.purple,
-        accentColor: Colors.amber,
-        fontFamily: 'OpenSans',
-        appBarTheme: AppBarTheme(
-          titleTextStyle: TextStyle(
-            fontFamily: 'Roboto',
-            fontSize: 18,
-            fontWeight: FontWeight.bold
-          )
-        )
-      ),
+          primarySwatch: Colors.purple,
+          accentColor: Colors.amber,
+          fontFamily: 'OpenSans',
+          appBarTheme: AppBarTheme(
+              titleTextStyle: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold))),
     );
   }
 }
@@ -36,10 +33,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
   final List<Transaction> _transactions = [];
 
-  List<Transaction> get _recentTransactions{
+  List<Transaction> get _recentTransactions {
     return _transactions.where((tr) {
       return tr.date.isAfter(DateTime.now().subtract(
         Duration(days: 7),
@@ -60,6 +56,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
 
     Navigator.of(context).pop();
+  }
+
+  _removeTransaction(String id) {
+    setState(() {
+      _transactions.removeWhere((element) => element.id == id);
+    });
   }
 
   _openTransactionFormModal(BuildContext context) {
@@ -90,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Chart(_recentTransactions),
-            TransactionList(_transactions),
+            TransactionList(_transactions, _removeTransaction),
           ],
         ),
       ),
