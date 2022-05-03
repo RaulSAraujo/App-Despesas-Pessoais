@@ -9,3 +9,4 @@
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
 <img src="img-projeto/Tela.png" alt="Tela inicial">
+<img src="img-projeto/Tela2.png" alt="Tela edição">
