@@ -18,8 +18,8 @@
 - [x] Criando lista de transação (tela inicial)
 - [x] Criando Formulario de transação (tela inicial)
 - [x] Implementando responsividade
-- [ ] Modo paisagem
-- [ ] Correções
+- [x] Modo paisagem
+- [x] Correções
 
 
 ## 💻 Sobre o projeto
