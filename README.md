@@ -8,5 +8,4 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-<img src="img-projeto/Tela.png" alt="Tela inicial">
-<img src="img-projeto/Tela2.png" alt="Tela edição">
+<img src="img-projeto/repository-open-graph-template.png" alt="Tela inicial">
